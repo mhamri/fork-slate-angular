@@ -43,7 +43,7 @@ Chrome、Edge、Safari、Firefox、QQ Browser
 
 ### 1. Install dependencies
 
-```
+```JSON
 "dependencies": {
     "direction": "^2.0.1",
     "is-hotkey": "^0.2.0",
@@ -55,7 +55,7 @@ Chrome、Edge、Safari、Firefox、QQ Browser
 
 ### 2. Loading SlateModule in AppModule
 
-```
+```TS
 import { FormsModule } from '@angular/forms';
 import { SlateModule } from 'slate-angular';
 
@@ -74,7 +74,7 @@ export class AppModule { }
 
 src/styles.scss
 
-```
+```SCSS
 @use 'slate-angular/styles/index.scss';
 
 // basic richtext styles
@@ -131,7 +131,7 @@ src/styles.scss
 
 ### 4. Add text-mark component
 
-```
+```TS
 import { ChangeDetectorRef, Component, ElementRef, Renderer2 } from "@angular/core";
 import { BaseTextComponent } from "slate-angular";
 
@@ -182,7 +182,7 @@ export class DemoTextMarkComponent extends BaseTextComponent {
 
 **Template**
 
-```
+```HTML
 <div class="demo-richtext-container">
     <slate-editable [editor]="editor" [(ngModel)]="value"
         (ngModelChange)="valueChange($event)"
@@ -215,7 +215,7 @@ export class DemoTextMarkComponent extends BaseTextComponent {
 
 **TS**
 
-```
+```TS
 import { Component, ViewChild, TemplateRef } from '@angular/core';
 import { createEditor, Element } from 'slate';
 import { withHistory } from 'slate-history';
